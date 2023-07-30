@@ -8,13 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import edu.utsa.cs3443.iosreminders.controller.SigninController;
 
 
 /*
- * Iain Summerlin - tea587
- *
- * The Main Activity class extends AppCompatActivity.
  *
  */
 public class MainActivity extends AppCompatActivity {
@@ -29,5 +26,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_page);
+
+        TextView textView = (TextView) findViewById(R.id.textView);
+        TextView usernameText = (TextView) findViewById(R.id.textUsername);
+        TextView passwordText = (TextView) findViewById(R.id.passwordText);
+
+        textView.setTextSize(40);
+        textView.setTextColor(Color.BLUE);
+        textView.setWidth(5);
+
+        usernameText.setTextSize(20);
+        usernameText.setTextColor(Color.BLUE);
+
+        passwordText.setTextSize(20);
+        passwordText.setTextColor(Color.BLUE);
+
+        Button signin = findViewById(R.id.button);
+        username=(EditText)findViewById(R.id.username);
+        password=(EditText)findViewById(R.id.password);
+        signin.setOnClickListener(new SigninController());
     }
 }
