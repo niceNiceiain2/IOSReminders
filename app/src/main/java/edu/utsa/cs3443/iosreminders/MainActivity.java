@@ -31,9 +31,7 @@ public class MainActivity extends AppCompatActivity {
         TextView usernameText = (TextView) findViewById(R.id.textUsername);
         TextView passwordText = (TextView) findViewById(R.id.passwordText);
 
-        textView.setTextSize(40);
         textView.setTextColor(Color.BLUE);
-        textView.setWidth(5);
 
         usernameText.setTextSize(20);
         usernameText.setTextColor(Color.BLUE);
