@@ -45,7 +45,7 @@ public class SigninController implements View.OnClickListener {
         }
 
         if (authenticate(username, password)) {
-            Intent intent = new Intent(context, MainActivity.class);
+            Intent intent = new Intent(context, CreateActivity.class);
             context.startActivity(intent);
         }
         else {
