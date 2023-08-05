@@ -1,4 +1,4 @@
-package com.example.realgroupproject;
+package edu.utsa.cs3443.iosreminders;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.realgroupproject", appContext.getPackageName());
+        assertEquals("edu.utsa.cs3443.iosreminders", appContext.getPackageName());
     }
 }

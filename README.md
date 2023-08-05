@@ -1,2 +1,0 @@
-# IOSReplicators
-IOS Replicators.

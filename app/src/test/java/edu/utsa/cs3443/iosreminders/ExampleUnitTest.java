@@ -1,4 +1,4 @@
-package com.example.realgroupproject;
+package edu.utsa.cs3443.iosreminders;
 
 import org.junit.Test;
 
