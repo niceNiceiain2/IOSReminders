@@ -4,7 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
+import java.time.LocalDateTime;
+
 import edu.utsa.cs3443.iosreminders.CreateActivity;
+import edu.utsa.cs3443.iosreminders.model.Event;
+import edu.utsa.cs3443.iosreminders.model.Reminder;
 
 public class CreateItemController implements View.OnClickListener {
 
