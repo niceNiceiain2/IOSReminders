@@ -1,10 +1,15 @@
+package edu.utsa.cs3443.iosreminders.model;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
 
-public class User {
+public class User implements Serializable {
     private int userId;             // Unique identifier for the user
     private String username;       // Username of the user
+
+    private String fullname;
+
     private String email;          // Email address of the user
     private String password;       // Password of the user
     private ArrayList<Event> eventList; // List to store the user's events 
@@ -16,7 +21,13 @@ public class User {
         this.email = email;
         this.password = password;
         this.eventList = new ArrayList<>(); // The eventList as an empty ArrayList
+    }
 
+    public User(int userId, String username, String password) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+        this.eventList = new ArrayList<>(); // The eventList as an empty ArrayList
     }
 
     // Getter for userId
@@ -34,6 +45,16 @@ public class User {
         this.username = username;
     }
 
+    // Getter for username
+    public String getFullname() {
+        return fullname;
+    }
+
+    // Setter for username
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
     // Getter for email
     public String getEmail() {
         return email;
@@ -49,7 +70,11 @@ public class User {
         this.password = password;
     }
 
+    //Getter for password
+    public String getPassword() { return password; }
 
+    //Getter for username
+    public String getUsername() { return username; }
 
     // Method to add an event to the user's eventList
     public void addEvent(Event event) {
