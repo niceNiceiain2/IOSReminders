@@ -86,12 +86,12 @@ public class User {
     // There is a separate Event class
     class Event {
     // Event class properties and methods
-    // ...
+
   }
 
   // There is a separate MenuView class
     class MenuView {
       // MenuView class properties and methods
-    // ...
+   
     }
 }
