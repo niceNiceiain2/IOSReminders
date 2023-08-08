@@ -3,7 +3,10 @@ package edu.utsa.cs3443.iosreminders.controller;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.widget.Toast;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -32,6 +35,22 @@ public class CreateItemController implements View.OnClickListener {
         LocalDateTime eventTime = LocalDateTime.parse(date + "T" + time);
         Event newEvent = new Event(1, name, description, createdTime, eventTime, null, null);
         EventPageActivity.user.addEvent(newEvent);
+
+        // Write to CSV
+        String csvLine = EventPageActivity.user.getName() + "," + name + "," + time + "," + date + "," + description + "\n";
+        try {
+            String filename = "events.csv";
+            FileOutputStream fos = context.openFileOutput(filename, Context.MODE_APPEND);
+            fos.write(csvLine.getBytes());
+            fos.close();
+
+            // Provide feedback to the user
+            Toast.makeText(context, "Item saved successfully!", Toast.LENGTH_SHORT).show();
+        } catch (IOException e) {
+            Toast.makeText(context, "Error saving item.", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
+
 
         Intent intent = new Intent(context, EventPageActivity.class);
         intent.putExtra("USER", EventPageActivity.user);
