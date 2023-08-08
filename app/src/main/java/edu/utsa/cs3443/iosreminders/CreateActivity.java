@@ -1,5 +1,6 @@
 package edu.utsa.cs3443.iosreminders;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import edu.utsa.cs3443.iosreminders.controller.CreateItemController;
+import edu.utsa.cs3443.iosreminders.model.User;
 
 public class CreateActivity extends AppCompatActivity {
     public static EditText descriptionField, dateField,nameField,timeField;
@@ -16,11 +18,6 @@ public class CreateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
-
-        //TextView dateField = (TextView) findViewById(R.id.DateText);
-        //TextView timeField = (TextView) findViewById(R.id.TimeText);
-        //TextView NameField = (TextView) findViewById(R.id.NameText);
-        //TextView descriptionField = (TextView) findViewById(R.id.DescriptionText);
 
         Button submit = findViewById(R.id.SubmitButton);
         descriptionField=(EditText)findViewById(R.id.descriptionEntryField);

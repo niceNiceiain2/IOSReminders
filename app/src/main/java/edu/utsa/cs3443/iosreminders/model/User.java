@@ -2,14 +2,10 @@ package edu.utsa.cs3443.iosreminders.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-
-
 public class User implements Serializable {
     private int userId;             // Unique identifier for the user
     private String username;       // Username of the user
-
     private String fullname;
-
     private String email;          // Email address of the user
     private String password;       // Password of the user
     private ArrayList<Event> eventList; // List to store the user's events 
@@ -88,9 +84,12 @@ public class User implements Serializable {
         eventList.remove(event);
     }
 
+    public void removeEvent(int n) {
+        eventList.remove(n);
+    }
+
     // Method to get the user's eventList
     public ArrayList<Event> getEventList() {
-
         return eventList;
     }
 
@@ -107,12 +106,6 @@ public class User implements Serializable {
 
         return menuView;
     }
-
-    // There is a separate Event class
-    class Event {
-    // Event class properties and methods
-
-  }
 
   // There is a separate MenuView class
     class MenuView {

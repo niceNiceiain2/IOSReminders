@@ -143,8 +143,14 @@
         android:id="@+id/SubmitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="294dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="389dp"
         android:text="Create"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="493dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

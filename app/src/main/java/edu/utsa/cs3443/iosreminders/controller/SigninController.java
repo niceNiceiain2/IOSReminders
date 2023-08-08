@@ -13,6 +13,7 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 import edu.utsa.cs3443.iosreminders.CreateActivity;
+import edu.utsa.cs3443.iosreminders.EventPageActivity;
 import edu.utsa.cs3443.iosreminders.MainActivity;
 import edu.utsa.cs3443.iosreminders.model.User;
 
@@ -73,7 +74,7 @@ public class SigninController implements View.OnClickListener {
         }
 
         if (authenticate(users.get(username),username, password)) {
-            Intent intent = new Intent(context, CreateActivity.class);
+            Intent intent = new Intent(context, EventPageActivity.class);
             intent.putExtra("USER", users.get(username));
             context.startActivity(intent);
         }
