@@ -97,7 +97,7 @@ public class EventPageActivity extends AppCompatActivity {
             labelQuantity.setGravity(Gravity.CENTER);
             labelQuantity.setTextColor(Color.BLACK);
             labelQuantity.setTextSize(15);
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY-MM-DD HH:mm:ss");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY-MM-dd HH:mm:ss");
             labelQuantity.setText(formatter.format(eventList.get(i).getTimeOfEvent()));
             tableRow.addView(labelQuantity);
 
@@ -141,7 +141,7 @@ public class EventPageActivity extends AppCompatActivity {
 
         TextView label_quantity = new TextView(EventPageActivity.this);
         label_quantity.setId(View.generateViewId());// define id that must be         unique
-        label_quantity.setText("Time"); // set the text for the header
+        label_quantity.setText("Date/Time"); // set the text for the header
         label_quantity.setTextSize(15);
         label_quantity.setTextColor(Color.WHITE); // set the color
         label_quantity.setGravity(Gravity.CENTER);
